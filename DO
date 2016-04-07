@@ -1,0 +1,35 @@
+{
+	float NP,P1,P2,P3,EF,Promedio,NF;
+	int n,i;
+	char resp;
+	Promedio=0;
+	i=0;
+	cout<<"BIENVENIDO A LA ZONA DE CONTROL"<<endl;
+
+	do 
+	 {
+		cout<<"INGRESE LA NOTA PRACTICA: "<<endl;
+		cin>>NP;
+		cout<<"INGRESE LA NOTA DEL PRIMER PARCIAL: "<<endl;
+		cin>>P1;
+        cout<<"INGRESE LA NOTA DEL SEGUNDO PARCIAL: "<<endl;
+		cin>>P2;
+        cout<<"INGRESE LA NOTA DEL TERCER PARCIAL: "<<endl;
+		cin>>P3;
+		cout<<"INGRESE LA NOTA DEL EXAMEN FINAL: "<<endl;
+		cin>>EF;
+		NF=(NP*0.2)+(((P1+P2+P3)/3)*0.40)+(EF*0.40);
+		system("cls");
+		cout<<"La Nota Final del Estudiante "<<i+1<<"es:"<<endl<<NF;
+		Promedio=Promedio+NF;
+        i++;
+		cout<<endl<<"Desea continuar (n para finalizar): "<<endl;
+		cin>>n;
+		
+
+	  }
+	while (resp!="n");
+	cout<< "EL PROMEDIO FINAL ES: "<<endl;
+	cout<<Promedio/i;
+	getch();
+}
